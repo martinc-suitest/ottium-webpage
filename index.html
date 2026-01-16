@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React App</title>
+    <link rel="stylesheet" href="/src/main.css" />
+    <link rel="stylesheet" href="/components/Navbar.css" />
+    <script>
+      document.getElementById('year').innerHTML = new Date().getFullYear();
+    </script>
+  </head>
+  <body>
+    <header>
+      <div id="root"></div>
+    </header>
+    <main>
+      <div id="app">
+        <section class="welcome-section" id="welcome">
+          <img src="src/img/logo/Ottium_Suitest_logo.svg" alt="Ottium Logo" class="welcome-logo" />
+          <p>Welcome to the Ottium info page! Ottium is an object-based non-intrusive way of testing your apps across all OTT platforms - Smart TVs, Mobile, Web and Game consoles. Automate your testing by getting insights from your application without running any SDK or library inside your app.</p>
+        </section>
+        <section id="features" class="tiles-section">
+          <h2>Features</h2>
+          <div class="tile-section-content">
+            <p>Ottium gives you several advantages in comparison with other testing platforms.</p>
+            <div class="tiles-grid">
+              <div class="single-tile">
+                <div class="feature-icon">&lt;/&gt;</div>
+                <h3>No Instrumentation</h3>
+                <p>Test without modifying your source code. Ottium works with your apps as-is, no SDK or library injection required.</p>
+              </div>
+              <div class="single-tile">
+                <div class="feature-icon">🖥️</div>
+                <h3>Cross-platform</h3>
+                <p>Create test scenarios once, execute anywhere. No matter if testing on for Smart TVs, set-top-boxes, mobile, web or consoles.</p>
+              </div>
+              <div class="single-tile">
+                <div class="feature-icon">⚡</div>
+                <h3>Fast execution</h3>
+                <p>Execute your test cases on hundreds of devices simultaneously. Speed up your regression and get results in minutes, not hours.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="platforms" class="platforms-section">
+          <h2>Supported Platforms</h2>
+          <div class="platforms-container">
+            <div class="categories-list">
+              <button class="category-button" id="smart" onclick="setSelectedCategory('smart')">Smart TVs</button>
+              <button class="category-button" id="ctv" onclick="setSelectedCategory('ctv')">CTV Devices (STBs, etc.)</button>
+              <button class="category-button" id="mobile" onclick="setSelectedCategory('mobile')">Mobile Devices</button>
+              <button class="category-button" id="web" onclick="setSelectedCategory('web')">Web Browsers</button>
+              <button class="category-button" id="console" onclick="setSelectedCategory('console')">Game Consoles</button>
+            </div>
+            <div class="platforms-list" id="platforms-list">
+              <div class="platforms-empty" id="platforms-empty">
+              <p>Select device category to see the list of supported platforms.</p>
+              </div>
+              <div class="platforms-group" data-category="smart" style="display:none">
+                <div class="platforms-grid">
+                  <div class="platform-item supported"><span class="platform-name">Android TV</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item supported"><span class="platform-name">LG webOS</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item supported"><span class="platform-name">Samsung Tizen</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item supported"><span class="platform-name">VIDAA</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item supported"><span class="platform-name">Vizio</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item supported"><span class="platform-name">Whale TV</span><span class="platform-badge">Supported</span></div>
+                </div>
+              </div>
+              <div class="platforms-group" data-category="ctv" style="display:none">
+                <div class="platforms-grid">
+                  <div class="platform-item supported"><span class="platform-name">Android TV</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item planned"><span class="platform-name">Apple TV</span><span class="platform-badge">Planned</span></div>
+                  <div class="platform-item supported"><span class="platform-name">Fire TV</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item supported"><span class="platform-name">Roku</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item supported"><span class="platform-name">Sky</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item planned"><span class="platform-name">Vega</span><span class="platform-badge">Planned</span></div>
+                  <div class="platform-item supported"><span class="platform-name">Xfinity</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item supported"><span class="platform-name">Xumo TV</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item supported"><span class="platform-name">XClass TV</span><span class="platform-badge">Supported</span></div>
+                </div>
+              </div>
+              <div class="platforms-group" data-category="mobile" style="display:none">
+                <div class="platforms-grid">
+                  <div class="platform-item supported"><span class="platform-name">Android mobile</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item supported"><span class="platform-name">Android tablet</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item planned"><span class="platform-name">iPhone (iOS)</span><span class="platform-badge">Planned</span></div>
+                  <div class="platform-item planned"><span class="platform-name">iPad (iPadOS)</span><span class="platform-badge">Planned</span></div>
+                </div>
+              </div>
+              <div class="platforms-group" data-category="web" style="display:none">
+                <div class="platforms-grid">
+                  <div class="platform-item planned"><span class="platform-name">Google Chrome</span><span class="platform-badge">Planned</span></div>
+                  <div class="platform-item planned"><span class="platform-name">Microsoft Edge</span><span class="platform-badge">Planned</span></div>
+                </div>
+              </div>
+              <div class="platforms-group" data-category="console" style="display:none">
+                <div class="platforms-grid">
+                  <div class="platform-item planned"><span class="platform-name">PlayStation 4</span><span class="platform-badge">Planned</span></div>
+                  <div class="platform-item planned"><span class="platform-name">PlayStation 5</span><span class="platform-badge">Planned</span></div>
+                  <div class="platform-item supported"><span class="platform-name">Xbox One</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item supported"><span class="platform-name">Xbox Series X/S</span><span class="platform-badge">Supported</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="docs" class="tiles-section">
+          <h2>Documentation</h2>
+          <div class="tile-section-content">
+            <p>Comprehensive documentation and guides about using Ottium for testing.</p>
+            <div class="tiles-grid">
+              <div class="single-tile change-on-focus">
+                <div class="docs-icon">📚</div>
+                <h3>Getting Started</h3>
+                <p>Learn how to set up and configure Ottium for your testing needs.</p>
+              </div>
+              <div class="single-tile change-on-focus">
+                <div class="docs-icon">🔧</div>
+                <h3>API Reference</h3>
+                <p>Explore our comprehensive API documentation and integration guides.</p>
+              </div>
+              <div class="single-tile change-on-focus">
+                <div class="docs-icon">📖</div>
+                <h3>Tutorials</h3>
+                <p>Step-by-step tutorials to help you master Ottium features.</p>
+              </div>
+              <div class="single-tile change-on-focus">
+                <div class="docs-icon">❓</div>
+                <h3>FAQ</h3>
+                <p>Answers to frequently asked questions about Ottium platform.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <script type="module" src="/src/main.tsx"></script>
+      </div>
+      <footer class="footer">
+        <p>&copy; 2016-<span id="year">2026</span> Suitest. All rights reserved</p>
+      </footer>
+    </main>
+  </body>
+</html>
