@@ -289,7 +289,7 @@
     top: 100%;
     left: 0;
     right: 0;
-    background-color: #9574cd;
+    background-color: #213547;
     border-radius: 0;
     padding: 1rem 2rem;
     max-width: none;
@@ -357,11 +357,12 @@
 
   .navbar-search.search-open .search-input {
     display: block;
+    padding-left: 40px;
   }
 
   .navbar-search.search-open .search-results {
     position: fixed;
-    top: auto;
+    top: 150px;
     left: 1rem;
     right: 1rem;
     max-height: 60vh;

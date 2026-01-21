@@ -5,13 +5,15 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>React App</title>
-    <link rel="stylesheet" href="src/styles/main.css" />
+    <link rel="stylesheet" href="src/styles/platforms.css" />
+    <link rel="stylesheet" href="src/styles/footer.css" />
     <link rel="stylesheet" href="src/styles/navbar.css" />
+    <link rel="stylesheet" href="src/styles/main.css" />
     <script>
       document.getElementById('year').innerHTML = new Date().getFullYear();
     </script>
     <script type="module" src="src/main.tsx"></script>
-    <script type="module" src="src/platformsSwitchHandler.ts"></script>
+    <script type="module" src="src/platformsClickHandler.ts"></script>
     <script type="module" src="src/platformsSwitchHandler.ts"></script>
   </head>
   <body>
@@ -52,11 +54,21 @@
           <h2>Supported Platforms</h2>
           <div class="platforms-container">
             <div class="categories-list">
-              <button class="category-button" id="smart" onclick="setSelectedCategory('smart')">Smart TVs</button>
-              <button class="category-button" id="ctv" onclick="setSelectedCategory('ctv')">CTV Devices (STBs, etc.)</button>
-              <button class="category-button" id="mobile" onclick="setSelectedCategory('mobile')">Mobile Devices</button>
-              <button class="category-button" id="web" onclick="setSelectedCategory('web')">Web Browsers</button>
-              <button class="category-button" id="console" onclick="setSelectedCategory('console')">Game Consoles</button>
+              <div class="categories-buttons">
+                <button class="category-button" id="smart" onclick="setSelectedCategory('smart')">Smart TVs</button>
+                <button class="category-button" id="ctv" onclick="setSelectedCategory('ctv')">CTV Devices (STBs, etc.)</button>
+                <button class="category-button" id="mobile" onclick="setSelectedCategory('mobile')">Mobile Devices</button>
+                <button class="category-button" id="web" onclick="setSelectedCategory('web')">Web Browsers</button>
+                <button class="category-button" id="console" onclick="setSelectedCategory('console')">Game Consoles</button>
+              </div>
+              <select class="category-dropdown" onchange="if(this.value) setSelectedCategory(this.value)" style="display:none">
+                <option value="" selected>Select a device category</option>
+                <option value="smart">Smart TVs</option>
+                <option value="ctv">CTV Devices (STBs, etc.)</option>
+                <option value="mobile">Mobile Devices</option>
+                <option value="web">Web Browsers</option>
+                <option value="console">Game Consoles</option>
+              </select>
             </div>
             <div class="platforms-list" id="platforms-list">
               <div class="platforms-empty" id="platforms-empty">

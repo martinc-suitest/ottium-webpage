@@ -1,0 +1,125 @@
+.platforms-section {
+  margin: 4rem 0;
+}
+
+.platforms-section h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.platforms-section p {
+  display: none;
+}
+
+.platforms-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 3rem;
+  align-items: start;
+}
+
+.categories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.category-button {
+  padding: 1rem 1.5rem;
+  font-size: 0.95rem;
+  text-align: left;
+  background-color: #f5f5f5;
+  color: #333;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-button:hover {
+  background-color: #efefef;
+  border-color: #213547;
+}
+
+.category-button.active {
+  background-color: #213547;
+  color: white;
+  border-color: #213547;
+}
+
+.platforms-list h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.platforms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.platform-item {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.platform-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.platform-item.supported {
+  border-left: 4px solid #4caf50;
+}
+
+.platform-item.planned {
+  border-left: 4px solid #ffa500;
+  opacity: 0.8;
+}
+
+.platform-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.platform-badge {
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.platform-item.supported .platform-badge {
+  color: #4caf50;
+}
+
+.platform-item.planned .platform-badge {
+  color: #ffa500;
+}
+
+.platforms-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  color: #999;
+  font-size: 1rem;
+  border: 2px dashed #e0e0e0;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+.platforms-empty p {
+  margin: 0;
+}
