@@ -6,26 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>React App</title>
     
-    <link rel="stylesheet" href="/components/Navbar.css" />
     
     <script>
       document.getElementById('year').innerHTML = new Date().getFullYear();
     </script>
-    <script type="module" crossorigin src="/assets/index-6898ae42.js"></script>
-    <link rel="stylesheet" href="/assets/index-0030749a.css">
+    
+    
+    
+    <script type="module" crossorigin src="/ottium-webpage/assets/index-57aefcf5.js"></script>
+    <link rel="stylesheet" href="/ottium-webpage/assets/index-0a122adc.css">
   </head>
   <body>
-    <header>
-      
-    </header>
+      <div id="navbar-root"></div>
+      <header>
+        <div id="root"></div>
+      </header>
     <main>
       <div id="app">
-        <div id="root"></div>
         <section class="welcome-section" id="welcome">
-          <img src="/assets/Ottium_Suitest_logo-cec32412.svg" alt="Ottium Logo" class="welcome-logo" />
+          <img src="/ottium-webpage/assets/Ottium_with_Suitest-04bf3b87.svg" alt="Ottium Logo" class="welcome-logo" />
           <p>Welcome to the Ottium info page! Ottium is an object-based non-intrusive way of testing your apps across all OTT platforms - Smart TVs, Mobile, Web and Game consoles. Automate your testing by getting insights from your application without running any SDK or library inside your app.</p>
         </section>
-        <section id="features" class="tiles-section">
+        <section id="features" class="tiles-section dark-bg">
           <h2>Features</h2>
           <div class="tile-section-content">
             <p>Ottium gives you several advantages in comparison with other testing platforms.</p>
@@ -48,7 +50,7 @@
             </div>
           </div>
         </section>
-        <section id="platforms" class="platforms-section">
+        <section id="platforms" class="platforms-section light-bg">
           <h2>Supported Platforms</h2>
           <div class="platforms-container">
             <div class="categories-list">
@@ -59,70 +61,78 @@
               <button class="category-button" id="console" onclick="setSelectedCategory('console')">Game Consoles</button>
             </div>
             <div class="platforms-list" id="platforms-list">
+              <div class="platforms-empty" id="platforms-empty">
+              <p>Select device category to see the list of supported platforms.</p>
+              </div>
               <div class="platforms-group" data-category="smart" style="display:none">
-                <h3>Smart TVs</h3>
                 <div class="platforms-grid">
-                  <div class="platform-item supported"><span class="platform-name">Samsung Tizen</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item supported"><span class="platform-name">Android TV</span><span class="platform-badge">Supported</span></div>
                   <div class="platform-item supported"><span class="platform-name">LG webOS</span><span class="platform-badge">Supported</span></div>
-                  <div class="platform-item planned"><span class="platform-name">Panasonic</span><span class="platform-badge">Planned</span></div>
+                  <div class="platform-item supported"><span class="platform-name">Samsung Tizen</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item supported"><span class="platform-name">VIDAA</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item supported"><span class="platform-name">Vizio</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item supported"><span class="platform-name">Whale TV</span><span class="platform-badge">Supported</span></div>
                 </div>
               </div>
               <div class="platforms-group" data-category="ctv" style="display:none">
-                <h3>CTV Devices (STBs, etc.)</h3>
                 <div class="platforms-grid">
-                  <div class="platform-item supported"><span class="platform-name">Apple TV</span><span class="platform-badge">Supported</span></div>
-                  <div class="platform-item planned"><span class="platform-name">Roku</span><span class="platform-badge">Planned</span></div>
+                  <div class="platform-item supported"><span class="platform-name">Android TV</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item planned"><span class="platform-name">Apple TV</span><span class="platform-badge">Planned</span></div>
+                  <div class="platform-item supported"><span class="platform-name">Fire TV</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item supported"><span class="platform-name">Roku</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item supported"><span class="platform-name">Sky</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item planned"><span class="platform-name">Vega</span><span class="platform-badge">Planned</span></div>
+                  <div class="platform-item supported"><span class="platform-name">Xfinity</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item supported"><span class="platform-name">Xumo TV</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item supported"><span class="platform-name">XClass TV</span><span class="platform-badge">Supported</span></div>
                 </div>
               </div>
               <div class="platforms-group" data-category="mobile" style="display:none">
-                <h3>Mobile Devices</h3>
                 <div class="platforms-grid">
-                  <div class="platform-item supported"><span class="platform-name">iOS</span><span class="platform-badge">Supported</span></div>
-                  <div class="platform-item supported"><span class="platform-name">Android</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item supported"><span class="platform-name">Android mobile</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item supported"><span class="platform-name">Android tablet</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item planned"><span class="platform-name">iPhone (iOS)</span><span class="platform-badge">Planned</span></div>
+                  <div class="platform-item planned"><span class="platform-name">iPad (iPadOS)</span><span class="platform-badge">Planned</span></div>
                 </div>
               </div>
               <div class="platforms-group" data-category="web" style="display:none">
-                <h3>Web Browsers</h3>
                 <div class="platforms-grid">
-                  <div class="platform-item supported"><span class="platform-name">Chrome</span><span class="platform-badge">Supported</span></div>
-                  <div class="platform-item supported"><span class="platform-name">Firefox</span><span class="platform-badge">Supported</span></div>
-                  <div class="platform-item planned"><span class="platform-name">Safari</span><span class="platform-badge">Planned</span></div>
+                  <div class="platform-item planned"><span class="platform-name">Google Chrome</span><span class="platform-badge">Planned</span></div>
+                  <div class="platform-item planned"><span class="platform-name">Microsoft Edge</span><span class="platform-badge">Planned</span></div>
                 </div>
               </div>
               <div class="platforms-group" data-category="console" style="display:none">
-                <h3>Game Consoles</h3>
                 <div class="platforms-grid">
-                  <div class="platform-item planned"><span class="platform-name">PlayStation</span><span class="platform-badge">Planned</span></div>
-                  <div class="platform-item planned"><span class="platform-name">Xbox</span><span class="platform-badge">Planned</span></div>
+                  <div class="platform-item planned"><span class="platform-name">PlayStation 4</span><span class="platform-badge">Planned</span></div>
+                  <div class="platform-item planned"><span class="platform-name">PlayStation 5</span><span class="platform-badge">Planned</span></div>
+                  <div class="platform-item supported"><span class="platform-name">Xbox One</span><span class="platform-badge">Supported</span></div>
+                  <div class="platform-item supported"><span class="platform-name">Xbox Series X/S</span><span class="platform-badge">Supported</span></div>
                 </div>
               </div>
             </div>
-            <div class="platforms-empty" id="platforms-empty">
-              <p>Select device category to see the list of supported platforms.</p>
-            </div>
           </div>
         </section>
-        <section id="docs" class="tiles-section">
+        <section id="docs" class="tiles-section dark-bg">
           <h2>Documentation</h2>
           <div class="tile-section-content">
             <p>Comprehensive documentation and guides about using Ottium for testing.</p>
             <div class="tiles-grid">
-              <div class="single-tile">
+              <div class="single-tile change-on-focus">
                 <div class="docs-icon">📚</div>
                 <h3>Getting Started</h3>
                 <p>Learn how to set up and configure Ottium for your testing needs.</p>
               </div>
-              <div class="single-tile">
+              <div class="single-tile change-on-focus">
                 <div class="docs-icon">🔧</div>
                 <h3>API Reference</h3>
                 <p>Explore our comprehensive API documentation and integration guides.</p>
               </div>
-              <div class="single-tile">
+              <div class="single-tile change-on-focus">
                 <div class="docs-icon">📖</div>
                 <h3>Tutorials</h3>
                 <p>Step-by-step tutorials to help you master Ottium features.</p>
               </div>
-              <div class="single-tile">
+              <div class="single-tile change-on-focus">
                 <div class="docs-icon">❓</div>
                 <h3>FAQ</h3>
                 <p>Answers to frequently asked questions about Ottium platform.</p>
@@ -130,11 +140,10 @@
             </div>
           </div>
         </section>
-        <footer class="footer">
-          <p>&copy; 2016-<span id="year">2026</span> Suitest. All rights reserved</p>
-        </footer>
-        
       </div>
+      <footer class="footer">
+        <p>&copy; 2016-<span id="year">2026</span> Suitest. All rights reserved</p>
+      </footer>
     </main>
   </body>
 </html>

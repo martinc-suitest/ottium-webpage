@@ -18,9 +18,7 @@ section {
 }
 
 #app {
-  margin: 0 auto;
-  padding: 2rem;
-  max-width: 1280px;
+  padding-top: 2rem;
   text-align: center;
   font-family: Roboto, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
 }
@@ -68,6 +66,9 @@ section {
 .platforms-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
   gap: 3rem;
   align-items: start;
 }
@@ -92,13 +93,13 @@ section {
 
 .category-button:hover {
   background-color: #efefef;
-  border-color: #646cff;
+  border-color: #213547;
 }
 
 .category-button.active {
-  background-color: #1a1a1a;
+  background-color: #213547;
   color: white;
-  border-color: #1a1a1a;
+  border-color: #213547;
 }
 
 .platforms-list h3 {
@@ -175,18 +176,39 @@ section {
 }
 
 .tiles-section {
-  margin: 4rem 0;
+  margin-top: 4rem 0;
 }
 
-.tiles-section h2 {
+.dark-bg {
+  background: linear-gradient(to right, #213547 0%, #718da7 100%);
+  padding: 40px;
+}
+
+.light-bg {
+  padding: 40px;
+}
+
+.tiles-section.dark-bg h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #ffffff  ;
+}
+
+.tiles-section.light-bg h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
   color: #333;
 }
 
-.tile-section-content > p {
+.tile-section-content {
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tiles-section.dark-bg .tile-section-content > p {
   font-size: 1rem;
-  color: #666;
+  color: #ffffff;
   margin-bottom: 2rem;
   max-width: 1280px;
   margin-left: auto;
@@ -326,7 +348,6 @@ button:hover {
   color: #999;
   text-align: center;
   padding: 2rem;
-  margin-top: 4rem;
   margin-bottom: 0;
   font-size: 0.9rem;
   width: 100vw;

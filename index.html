@@ -5,23 +5,27 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>React App</title>
-    <link rel="stylesheet" href="/src/main.css" />
-    <link rel="stylesheet" href="/components/Navbar.css" />
+    <link rel="stylesheet" href="src/styles/main.css" />
+    <link rel="stylesheet" href="src/styles/navbar.css" />
     <script>
       document.getElementById('year').innerHTML = new Date().getFullYear();
     </script>
+    <script type="module" src="src/main.tsx"></script>
+    <script type="module" src="src/platformsSwitchHandler.ts"></script>
+    <script type="module" src="src/platformsSwitchHandler.ts"></script>
   </head>
   <body>
-    <header>
-      <div id="root"></div>
-    </header>
+      <div id="navbar-root"></div>
+      <header>
+        <div id="root"></div>
+      </header>
     <main>
       <div id="app">
         <section class="welcome-section" id="welcome">
-          <img src="src/img/logo/Ottium_Suitest_logo.svg" alt="Ottium Logo" class="welcome-logo" />
+          <img src="src/img/logo/Ottium_with_Suitest.svg" alt="Ottium Logo" class="welcome-logo" />
           <p>Welcome to the Ottium info page! Ottium is an object-based non-intrusive way of testing your apps across all OTT platforms - Smart TVs, Mobile, Web and Game consoles. Automate your testing by getting insights from your application without running any SDK or library inside your app.</p>
         </section>
-        <section id="features" class="tiles-section">
+        <section id="features" class="tiles-section dark-bg">
           <h2>Features</h2>
           <div class="tile-section-content">
             <p>Ottium gives you several advantages in comparison with other testing platforms.</p>
@@ -44,7 +48,7 @@
             </div>
           </div>
         </section>
-        <section id="platforms" class="platforms-section">
+        <section id="platforms" class="platforms-section light-bg">
           <h2>Supported Platforms</h2>
           <div class="platforms-container">
             <div class="categories-list">
@@ -106,7 +110,7 @@
             </div>
           </div>
         </section>
-        <section id="docs" class="tiles-section">
+        <section id="docs" class="tiles-section dark-bg">
           <h2>Documentation</h2>
           <div class="tile-section-content">
             <p>Comprehensive documentation and guides about using Ottium for testing.</p>
@@ -134,7 +138,6 @@
             </div>
           </div>
         </section>
-        <script type="module" src="/src/main.tsx"></script>
       </div>
       <footer class="footer">
         <p>&copy; 2016-<span id="year">2026</span> Suitest. All rights reserved</p>

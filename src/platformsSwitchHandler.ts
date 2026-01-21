@@ -1,7 +1,7 @@
 // platformsSwitchHandler.ts
 // Handles switching visible platforms group based on selected category
 
-function setSelectedCategory(id: string) {
+export function setSelectedCategory(id: string) {
   // Remove 'active' from all buttons
   const buttons = document.querySelectorAll<HTMLButtonElement>('.categories-list .category-button');
   buttons.forEach((btn) => btn.classList.remove('active'));
@@ -27,6 +27,4 @@ function setSelectedCategory(id: string) {
   }
 }
 
-// Attach to window for inline HTML usage
-// @ts-ignore
-window.setSelectedCategory = setSelectedCategory;
+
