@@ -7,14 +7,16 @@
     <title>React App</title>
     
     
+    
+    
     <script>
       document.getElementById('year').innerHTML = new Date().getFullYear();
     </script>
     
     
     
-    <script type="module" crossorigin src="/ottium-webpage/assets/index-57aefcf5.js"></script>
-    <link rel="stylesheet" href="/ottium-webpage/assets/index-0a122adc.css">
+    <script type="module" crossorigin src="/ottium-webpage/assets/index-c1bd494c.js"></script>
+    <link rel="stylesheet" href="/ottium-webpage/assets/index-629f83c4.css">
   </head>
   <body>
       <div id="navbar-root"></div>
@@ -54,11 +56,21 @@
           <h2>Supported Platforms</h2>
           <div class="platforms-container">
             <div class="categories-list">
-              <button class="category-button" id="smart" onclick="setSelectedCategory('smart')">Smart TVs</button>
-              <button class="category-button" id="ctv" onclick="setSelectedCategory('ctv')">CTV Devices (STBs, etc.)</button>
-              <button class="category-button" id="mobile" onclick="setSelectedCategory('mobile')">Mobile Devices</button>
-              <button class="category-button" id="web" onclick="setSelectedCategory('web')">Web Browsers</button>
-              <button class="category-button" id="console" onclick="setSelectedCategory('console')">Game Consoles</button>
+              <div class="categories-buttons">
+                <button class="category-button" id="smart" onclick="setSelectedCategory('smart')">Smart TVs</button>
+                <button class="category-button" id="ctv" onclick="setSelectedCategory('ctv')">CTV Devices (STBs, etc.)</button>
+                <button class="category-button" id="mobile" onclick="setSelectedCategory('mobile')">Mobile Devices</button>
+                <button class="category-button" id="web" onclick="setSelectedCategory('web')">Web Browsers</button>
+                <button class="category-button" id="console" onclick="setSelectedCategory('console')">Game Consoles</button>
+              </div>
+              <select class="category-dropdown" onchange="if(this.value) setSelectedCategory(this.value)" style="display:none">
+                <option value="" selected>Select a device category</option>
+                <option value="smart">Smart TVs</option>
+                <option value="ctv">CTV Devices (STBs, etc.)</option>
+                <option value="mobile">Mobile Devices</option>
+                <option value="web">Web Browsers</option>
+                <option value="console">Game Consoles</option>
+              </select>
             </div>
             <div class="platforms-list" id="platforms-list">
               <div class="platforms-empty" id="platforms-empty">
