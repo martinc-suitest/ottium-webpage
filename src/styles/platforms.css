@@ -8,10 +8,6 @@
   color: #333;
 }
 
-.platforms-section p {
-  display: none;
-}
-
 .platforms-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -23,13 +19,26 @@
 }
 
 .categories-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-auto-flow: row;
   gap: 1rem;
 }
 
+.categories-dropdow {
+  display: none;
+}
+
+.categories-buttons {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+  display: flex;
+}
+  
 .category-button {
   padding: 1rem 1.5rem;
+  width: 100%;
+  min-width: 0;
   font-size: 0.95rem;
   text-align: left;
   background-color: #f5f5f5;
