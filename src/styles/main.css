@@ -146,6 +146,18 @@ button:hover {
   border-color: #3ca363;
 }
 
+.categories-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.category-button {
+  flex: 1 1 0;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 @media (max-width: 768px) {
 
   .welcome-section p {
@@ -168,6 +180,10 @@ button:hover {
     flex-wrap: wrap;
   }
 
+  .categories-buttons {
+    display: none;
+  }
+
   .category-button {
     flex: 1;
     min-width: 150px;
@@ -177,13 +193,8 @@ button:hover {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 
-  .categories-buttons {
-    display: none;
-  }
-
-  .category-dropdown {
+  .categories-dropdown {
     display: block !important;
-    width: 100%;
     padding: 0.6em 1.2em;
     font-size: 1em;
     font-family: inherit;
@@ -192,15 +203,5 @@ button:hover {
     margin-bottom: 1rem;
     background: #fff;
     color: #333;
-  }
-}
-
-@media (min-width: 769px) {
-  .category-dropdown {
-    display: none !important;
-  }
-  .categories-buttons {
-    display: flex;
-    gap: 1rem;
   }
 }
