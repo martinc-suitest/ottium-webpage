@@ -97,6 +97,10 @@
   opacity: 0.8;
 }
 
+.platforms-grid a {
+  text-decoration: none;
+}
+
 .platform-name {
   font-weight: 600;
   color: #333;
